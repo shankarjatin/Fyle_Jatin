@@ -1,0 +1,50 @@
+.intro-section {
+    padding: 40px;
+    overflow-x: hidden;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.award-winning {
+    color: #E63946;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    background-color: #E63946;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    align-self: start;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
