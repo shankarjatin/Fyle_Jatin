@@ -14,11 +14,14 @@ const Introduction = () => {
                     <div className='text-content'>
                         <h3 className='award-winning'>AWARD WINNING</h3>
                         <h1 className='title'>DIGITAL MARKETING <br></br> AGENCY</h1>
-                        <p className='description'>
+                        <div className='description'>
+                        <p >
                             Morbi sed lacus nec risus finibus feugiat et fermentum nibh. 
                             Pellentesque vitae ante et elit fringilla ac at purus, Morbi sed lacus nec risus finibus feugiat et fermentum loremipsum ed lacus nec risus finibus feugiat et fermentum nibh. 
                             Pellentesque vitae ante et elit fringilla ac at purus, Morbi sed lacus nec risus finibus   .
                         </p>
+                        </div>
+                        
                         <Button className='contact-button'>CONTACT US</Button>
                     </div>
                 </Col>

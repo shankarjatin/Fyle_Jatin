@@ -1,11 +1,12 @@
 import React from 'react';
 import './WhyChooseUs.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const WhyChooseUs = () => {
   return (
     <div className="container text-center my-5">
       <h5 className="text-danger">WHY CHOOSE US</h5>
-      <h2 className="font-weight-bold">WHY WE ARE BEST</h2>
+      <h2 className=" extra-bold">WHY WE ARE BEST</h2>
       <div className="row mt-4">
         <div className="col-md-3">
           <div className="icon-container mb-3">
