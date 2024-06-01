@@ -25,9 +25,11 @@
 }
 
 .description {
-    color: #6c757d;
+    color: #000000;
     margin-bottom: 20px;
 }
+
+
 
 .card-group {
     display: flex;
@@ -37,21 +39,73 @@
 .service-card {
     flex: 1;
     margin: 0 10px;
+    position: relative;
 }
 
 .service-card img {
     object-fit: cover;
     height: 400px;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 20px;
-    border-radius: 10px;
-    bottom: 0;
+.service-card .service-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b31f34; /* White background with some transparency */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.carousel-dots {
+.overlay-description{
+    color: #ffffff;
+    margin-top: 15px;
+    padding-top: 10px;
+}
+.service-card-overlay .overlay-icon {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.service-card:hover img {
+    opacity: 0;
+}
+
+.service-card:hover .service-card-overlay {
+    opacity: 1;
+}
+
+.service-card-overlay h3, .service-card-overlay p {
+    margin: 10px 0;
+}
+
+.service-card-overlay .overlay-icon {
+    margin-bottom: 20px;
+    color: #eeeeee;
+}
+.read-more-btn {
+    background-color: #ffffff;
+    color: #b31f34;
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more-btn:hover {
+    background-color: #ffffff;
+}
+
+/* .carousel-dots {
     text-align: center;
     margin-top: 20px;
 }
@@ -68,4 +122,44 @@
 
 .dot.active {
     background-color: #E63946;
+} */
+
+
+
+
+
+.carousel-dots {
+    text-align: start;
+    margin-top: 20px;
 }
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    position: relative; /* Added for positioning the inner dot */
+}
+
+.dot.active {
+    background-color: transparent; /* Outer circle is transparent */
+    border: 2px solid #E63946; /* Red border */
+    height: 15px;
+    width: 15px;
+}
+
+.dot.active::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5px; /* Adjust size of inner dot */
+    width: 5px;
+    background-color: #E63946; /* Inner red dot */
+    border-radius: 50%;
+}
+

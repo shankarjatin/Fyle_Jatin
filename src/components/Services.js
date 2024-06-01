@@ -1,4 +1,4 @@
-// import React from 'react';
+// import React, { useState } from 'react';
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
@@ -11,6 +11,8 @@
 // import img5 from '../images/img-5.jpg';
 
 // const Services = () => {
+//     const [index, setIndex] = useState(0);
+
 //     const items = [
 //         {
 //             img: img1,
@@ -51,6 +53,10 @@
 //         return resultArray;
 //     }, []);
 
+//     const handleSelect = (selectedIndex) => {
+//         setIndex(selectedIndex);
+//     };
+
 //     return (
 //         <Container className='services-section'>
 //             <Row>
@@ -66,27 +72,47 @@
 //             </Row>
 //             <Row>
 //                 <Col sm={12}>
-//                     <Carousel interval={null}>
-//                         {groupedItems.map((group, index) => (
-//                             <Carousel.Item key={index}>
+//                     <Carousel
+//                         activeIndex={index}
+//                         onSelect={handleSelect}
+//                         controls={false}
+//                         indicators={false}
+//                         interval={null}
+//                     >
+//                         {groupedItems.map((group, slideIndex) => (
+//                             <Carousel.Item key={slideIndex}>
 //                                 <div className='card-group'>
 //                                     {group.map((item, idx) => (
 //                                         <div className='service-card' key={idx}>
-//                                             <img
-//                                                 className="d-block w-100"
-//                                                 src={item.img}
-//                                                 alt={`Slide ${index}`}
-//                                             />
-//                                             <Carousel.Caption>
-//                                                 <h3>{item.title}</h3>
-//                                                 <p>{item.description}</p>
-//                                             </Carousel.Caption>
+//                                             <div className='service-card-image'>
+//                                                 <img
+//                                                     className="d-block w-100"
+//                                                     src={item.img}
+//                                                     alt={`Slide ${slideIndex}`}
+//                                                 />
+//                                                 <div className='service-card-overlay'>
+//                                                     <h3>WEB DEVELOPMENT</h3>
+//                                                     <p className='overlay-discription'></p>
+//                                                     <a href="https://www.fylehq.com" target="_blank" rel="noopener noreferrer" className="read-more-btn">
+//                                                         Read more
+//                                                     </a>
+//                                                 </div>
+//                                             </div>
 //                                         </div>
 //                                     ))}
 //                                 </div>
 //                             </Carousel.Item>
 //                         ))}
 //                     </Carousel>
+//                     <div className="carousel-dots">
+//                         {groupedItems.map((_, dotIndex) => (
+//                             <span
+//                                 key={dotIndex}
+//                                 className={`dot ${index === dotIndex ? 'active' : ''}`}
+//                                 onClick={() => handleSelect(dotIndex)}
+//                             ></span>
+//                         ))}
+//                     </div>
 //                 </Col>
 //             </Row>
 //         </Container>
@@ -95,12 +121,14 @@
 
 // export default Services;
 
-
 import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './Services.css';
 import img1 from '../images/img-1.jpg';
 import img2 from '../images/img-2.jpg';
@@ -182,12 +210,23 @@ const Services = () => {
                                 <div className='card-group'>
                                     {group.map((item, idx) => (
                                         <div className='service-card' key={idx}>
-                                            <img
-                                                className="d-block w-100"
-                                                src={item.img}
-                                                alt={`Slide ${slideIndex}`}
-                                            />
-                                            
+                                            <div className='service-card-image'>
+                                                <img
+                                                    className="d-block w-100"
+                                                    src={item.img}
+                                                    alt={`Slide ${slideIndex}`}
+                                                />
+                                                <div className='service-card-overlay'>
+                                                    <FontAwesomeIcon icon={faCode} size="3x" className='overlay-icon'/>
+                                                    <h3>WEB DEVELOPMENT</h3>
+                                                    <p className='overlay-description'>
+                                                        Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante et elit fringilla ac at purus, Morbi sed lacus nec risus finibus feugiat et fermentum.
+                                                    </p>
+                                                    <a href="https://www.fylehq.com" target="_blank" rel="noopener noreferrer" className="read-more-btn">
+                                                        Read more <FontAwesomeIcon icon={faArrowRight} />
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     ))}
                                 </div>
