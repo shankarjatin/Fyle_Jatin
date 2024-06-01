@@ -52,7 +52,7 @@
 }
 
 .carousel-dots {
-    text-align: center;
+    text-align: start;
     margin-top: 20px;
 }
 
@@ -60,12 +60,29 @@
     height: 15px;
     width: 15px;
     margin: 0 5px;
-    background-color: #bbb;
+    background-color: #000000;
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+    position: relative; /* Added for positioning the inner dot */
 }
 
 .dot.active {
-    background-color: #E63946;
+    background-color: transparent; /* Outer circle is transparent */
+    border: 2px solid #E63946; /* Red border */
+    height: 15px;
+    width: 15px;
 }
+
+.dot.active::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5px; /* Adjust size of inner dot */
+    width: 5px;
+    background-color: #E63946; /* Inner red dot */
+    border-radius: 50%;
+}
+
