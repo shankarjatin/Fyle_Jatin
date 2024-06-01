@@ -1,6 +1,8 @@
 .footer-section {
     background-color: #E63946; /* Adjust color as needed */
     padding: 20px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer-logo {
