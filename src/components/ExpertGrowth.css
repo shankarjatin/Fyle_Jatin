@@ -1,8 +1,13 @@
+.row{
+    padding-top: 40px;
+}
+
 .card {
     border: none;
     transition: transform 0.3s, box-shadow 0.3s;
   }
   
+
   .card-title {
     font-size: 2rem;
   }
@@ -12,6 +17,9 @@
     color: #6c757d;
   }
   
+  .extra-bold {
+    font-weight: 800;
+}
   .hover-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

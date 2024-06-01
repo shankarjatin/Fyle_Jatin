@@ -30,7 +30,7 @@ const OurProjects = () => {
     <div className="container my-5">
      
       <h5 className="text-danger">OUR PROJECT</h5>
-          <h2 className="font-weight-bold">WHY WE ARE BEST</h2>
+          <h2 className=" extra-bold">WHY WE ARE BEST</h2>
           <div className="row main-area">
         <div className="col-md-8">
           <img src={selectedImage.src} alt={selectedImage.title} className="img-fluid rounded" />

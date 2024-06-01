@@ -12,6 +12,10 @@
     margin-top: 40px;
     padding-top: 30px;
   }
+  .extra-bold {
+    font-weight: 800;
+}
+
 .list-group{
     justify-content: space-evenly;
     gap:20px;
