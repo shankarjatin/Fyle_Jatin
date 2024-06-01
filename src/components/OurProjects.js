@@ -14,11 +14,13 @@
 
 import React, { useState } from 'react';
 import './OurProjects.css';
-
+import imgp1 from '../images/img-p1.jpg'
+import imgp2 from '../images/img-p2.jpg'
+import imgp3 from '../images/img-p3.jpg'
 const images = [
-  { id: 1, src: 'path_to_image_1', title: 'Genderless Kei – Japan’s Hot', description: 'Set to launch on the manufacturer\'s new A330neo aircraft in 2017, it\'s offering lots of...' },
-  { id: 2, src: 'path_to_image_2', title: 'Better Strategy & Quality', description: 'Set to launch on the manufacturer\'s new A330neo aircraft in 2017, it\'s offering lots of...' },
-  { id: 3, src: 'path_to_image_3', title: 'Genderless Kei – Japan’s Hot', description: 'Set to launch on the manufacturer\'s new A330neo aircraft in 2017, it\'s offering lots of...' },
+  { id: 1, src: imgp1, title: 'Genderless Kei – Japan’s Hot', description: 'Set to launch on the manufacturer\'s new A330neo aircraft in 2017, it\'s offering lots of...' },
+  { id: 2, src: imgp2, title: 'Better Strategy & Quality', description: 'Set to launch on the manufacturer\'s new A330neo aircraft in 2017, it\'s offering lots of...' },
+  { id: 3, src: imgp3, title: 'Genderless Kei – Japan’s Hot', description: 'Set to launch on the manufacturer\'s new A330neo aircraft in 2017, it\'s offering lots of...' },
 ];
 
 const OurProjects = () => {
@@ -26,9 +28,10 @@ const OurProjects = () => {
 
   return (
     <div className="container my-5">
-      <div className="row">
+     
       <h5 className="text-danger">OUR PROJECT</h5>
           <h2 className="font-weight-bold">WHY WE ARE BEST</h2>
+          <div className="row main-area">
         <div className="col-md-8">
           <img src={selectedImage.src} alt={selectedImage.title} className="img-fluid rounded" />
         </div>
